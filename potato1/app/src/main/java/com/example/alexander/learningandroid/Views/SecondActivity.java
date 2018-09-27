@@ -1,8 +1,9 @@
-package com.example.alexander.learningandroid;
+package com.example.alexander.learningandroid.Views;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import com.example.alexander.learningandroid.R;
 
 public class SecondActivity extends AppCompatActivity {
     @Override

@@ -1,4 +1,4 @@
-package com.example.alexander.learningandroid;
+package com.example.alexander.learningandroid.Views;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+import com.example.alexander.learningandroid.R;
 
 public class Tab1Fragment extends Fragment {
     private static final String TAG = "Tab1Fragment";
