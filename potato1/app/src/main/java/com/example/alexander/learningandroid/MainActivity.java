@@ -21,6 +21,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private SectionsPageAdapter mSectionsPageAdapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
