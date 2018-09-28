@@ -7,10 +7,13 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
-    <string name="tab1_button">TESTBTN 1</string>
-    <string name="tab2_button">TESTBTN 2</string>
-    <string name="tab3_button">TESTBTN 3</string>
 
+    <!-- BUTTONS -->
+    <string name="btn_tab1">TESTBTN 1</string>
+    <string name="btn_tab2">TESTBTN 2</string>
+    <string name="btn_tab3">TESTBTN 3</string>
+    <string name="btn_tab1_act2">Show Activity 2</string>
+    <string name="btn_act2">Return</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
