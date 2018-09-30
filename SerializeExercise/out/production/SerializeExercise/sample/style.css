@@ -1,0 +1,27 @@
+#anchorHome {
+    -fx-background-image: url("flames.jpg");
+    -fx-background-size: 600 400;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+#anchorHomeTitle {
+    -fx-background-color: #000000;
+}
+
+.white-text {
+    -fx-color: white;
+}
+
+#homeTitleText {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+#homeButtonText {
+    -fx-font-size: 14px;
+}
+
+.cool-font {
+    -fx-font-family: fantasy;
+}

@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
@@ -13,7 +14,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
 
     @FXML private AnchorPane base;
     @FXML private StackPane stack;
@@ -23,6 +24,12 @@ public class Controller {
     @FXML private SplitPane splitSubpage;
     @FXML private AnchorPane subpageHeader;
     @FXML private AnchorPane subpageContent;
+
+    @FXML private Button btnCreateExercise;
+    @FXML private Button btnCreateRoutine;
+    @FXML private Button btnViewExercises;
+    @FXML private Button btnViewRoutines;
+
 
 
     @FXML
@@ -37,5 +44,30 @@ public class Controller {
         anchorSubpage.toFront();
         anchorHome.setVisible(false);
         anchorSubpage.setVisible(true);
+    }
+
+    @FXML
+    public void frontCreateExercise(){
+
+    }
+
+    @FXML
+    public void frontCreateRoutine(){
+
+    }
+
+    @FXML
+    public void frontViewExercises(){
+
+    }
+
+    @FXML
+    public void frontViewRoutines(){
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
     }
 }

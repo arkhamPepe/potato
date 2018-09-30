@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane fx:id="base" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="base" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <AnchorPane fx:id="anchorHome" prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <Button layoutX="274.0" layoutY="236.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="357.0" layoutY="201.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="292.0" layoutY="163.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="138.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="anchorSubpage" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane fx:id="anchorSubpage" prefHeight="400.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <SplitPane fx:id="splitSubpage" dividerPositions="0.13316582914572864" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
               <items>
@@ -27,6 +19,20 @@
                   </AnchorPane>
               </items>
             </SplitPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="anchorHome" fx:id="anchorHome" layoutX="24.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="homeButtonText" fx:id="btnViewExercises" layoutX="150.0" layoutY="178.0" minWidth="300.0" mnemonicParsing="false" text="Alla övningar" />
+            <Button id="homeButtonText" fx:id="btnViewRoutines" layoutX="150.0" layoutY="271.0" minWidth="300.0" mnemonicParsing="false" text="Alla träningspass" />
+            <Button id="homeButtonText" fx:id="btnCreateRoutine" layoutX="150.0" layoutY="239.0" minWidth="300.0" mnemonicParsing="false" text="Nytt träningspass" />
+            <Button id="homeButtonText" fx:id="btnCreateExercise" layoutX="150.0" layoutY="146.0" minWidth="300.0" mnemonicParsing="false" text="Ny övning" />
+            <AnchorPane id="#anchorHomeTitle" layoutX="150.0" layoutY="46.0" prefHeight="80.0" prefWidth="300.0" styleClass="cool-font">
+               <children>
+                  <Label id="homeTitleText" layoutX="87.0" layoutY="14.0" styleClass="white-text" text="Exercise Maker" textFill="WHITE" />
+                  <Label layoutX="109.0" layoutY="49.0" styleClass="white-text" text="av ArkhamPepe" textFill="WHITE" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
