@@ -9,12 +9,23 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import sample.Control.CreateExerciseController;
+import sample.Control.CreateRoutineController;
+import sample.Control.ViewExercisesController;
+import sample.Control.ViewRoutinesController;
 
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
+
+    private static Controller controller;
+
+    private CreateExerciseController createExerciseController;
+    private CreateRoutineController createRoutineController;
+    private ViewExercisesController viewExercisesController;
+    private ViewRoutinesController viewRoutinesController;
 
     @FXML private AnchorPane base;
     @FXML private StackPane stack;
@@ -32,6 +43,14 @@ public class Controller implements Initializable {
 
 
 
+    private Controller(){
+        controller = this;
+    }
+
+    public static Controller getInstance(){
+        return controller;
+    }
+
     @FXML
     public void frontHome(){
         anchorHome.toFront();
@@ -47,23 +66,23 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    public void frontCreateExercise(){
-
+    public void showCreateExercise(){
+        frontSubpage();
     }
 
     @FXML
-    public void frontCreateRoutine(){
-
+    public void showCreateRoutine(){
+        frontSubpage();
     }
 
     @FXML
-    public void frontViewExercises(){
-
+    public void showViewExercises(){
+        frontSubpage();
     }
 
     @FXML
-    public void frontViewRoutines(){
-
+    public void showViewRoutines(){
+        frontSubpage();
     }
 
     @Override
