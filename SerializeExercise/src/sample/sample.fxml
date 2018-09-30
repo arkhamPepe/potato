@@ -9,10 +9,10 @@
    <children>
       <AnchorPane id="anchorHome" fx:id="anchorHome" layoutX="24.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button id="homeButtonText" fx:id="btnViewExercises" layoutX="150.0" layoutY="178.0" minWidth="300.0" mnemonicParsing="false" text="Alla övningar" />
-            <Button id="homeButtonText" fx:id="btnViewRoutines" layoutX="150.0" layoutY="271.0" minWidth="300.0" mnemonicParsing="false" text="Alla träningspass" />
-            <Button id="homeButtonText" fx:id="btnCreateRoutine" layoutX="150.0" layoutY="239.0" minWidth="300.0" mnemonicParsing="false" text="Nytt träningspass" />
-            <Button id="homeButtonText" fx:id="btnCreateExercise" layoutX="150.0" layoutY="146.0" minWidth="300.0" mnemonicParsing="false" text="Ny övning" />
+            <Button id="homeButtonText" fx:id="btnViewExercises" layoutX="150.0" layoutY="178.0" minWidth="300.0" mnemonicParsing="false" onAction="#showViewExercises" text="Alla övningar" />
+            <Button id="homeButtonText" fx:id="btnViewRoutines" layoutX="150.0" layoutY="271.0" minWidth="300.0" mnemonicParsing="false" onAction="#showViewRoutines" text="Alla träningspass" />
+            <Button id="homeButtonText" fx:id="btnCreateRoutine" layoutX="150.0" layoutY="239.0" minWidth="300.0" mnemonicParsing="false" onAction="#showCreateRoutine" text="Nytt träningspass" />
+            <Button id="homeButtonText" fx:id="btnCreateExercise" layoutX="150.0" layoutY="146.0" minWidth="300.0" mnemonicParsing="false" onAction="#showCreateExercise" text="Ny övning" />
             <AnchorPane id="#anchorHomeTitle" layoutX="150.0" layoutY="46.0" prefHeight="80.0" prefWidth="300.0" styleClass="cool-font">
                <children>
                   <Label id="homeTitleText" layoutX="87.0" layoutY="14.0" styleClass="white-text" text="Exercise Maker" textFill="WHITE" />
@@ -21,14 +21,20 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="anchorSubpage" prefHeight="400.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="anchorSubpage" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <SplitPane fx:id="splitSubpage" dividerPositions="0.13316582914572864" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
               <items>
-                <AnchorPane fx:id="subpageHeader" maxHeight="50.0" minHeight="50.0" minWidth="0.0" prefHeight="50.0" prefWidth="598.0" />
+                <AnchorPane fx:id="subpageHeader" maxHeight="50.0" minHeight="50.0" minWidth="0.0" prefHeight="50.0" prefWidth="598.0">
+                     <children>
+                        <Button fx:id="btnHome" layoutX="532.0" layoutY="13.0" mnemonicParsing="false" onAction="#frontHome" text="Home" />
+                     </children></AnchorPane>
                 <AnchorPane fx:id="subpageContent" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                         <fx:include source="View/createExercise.fxml" />
+                         <!--<fx:include fx:id="anchorCreateExercise" source="View/createExercise.fxml" />
+                         <fx:include fx:id="anchorCreateRoutine" source="View/createRoutine.fxml" />
+                         <fx:include fx:id="anchorViewExercises" source="View/viewExercises.fxml" />
+                         <fx:include fx:id="anchorViewRoutines" source="View/viewRoutines.fxml" />-->
                      </children>
                   </AnchorPane>
               </items>

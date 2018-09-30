@@ -23,6 +23,10 @@ public class CreateExerciseController implements Initializable {
 
     private ToggleGroup homeButtons;
 
+    public CreateExerciseController(){
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         controller = Controller.getInstance();

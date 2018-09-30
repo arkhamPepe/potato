@@ -36,14 +36,18 @@ public class Controller implements Initializable {
     @FXML private AnchorPane subpageHeader;
     @FXML private AnchorPane subpageContent;
 
+    @FXML private AnchorPane anchorCreateExercise;
+    @FXML private AnchorPane anchorCreateRoutine;
+    @FXML private AnchorPane anchorViewExercises;
+    @FXML private AnchorPane anchorViewRoutines;
+
+    @FXML private Button btnHome;
     @FXML private Button btnCreateExercise;
     @FXML private Button btnCreateRoutine;
     @FXML private Button btnViewExercises;
     @FXML private Button btnViewRoutines;
 
-
-
-    private Controller(){
+    public Controller(){
         controller = this;
     }
 
@@ -68,21 +72,25 @@ public class Controller implements Initializable {
     @FXML
     public void showCreateExercise(){
         frontSubpage();
+        anchorCreateExercise.toFront();
     }
 
     @FXML
     public void showCreateRoutine(){
         frontSubpage();
+        anchorCreateRoutine.toFront();
     }
 
     @FXML
     public void showViewExercises(){
         frontSubpage();
+        anchorViewExercises.toFront();
     }
 
     @FXML
     public void showViewRoutines(){
         frontSubpage();
+        anchorViewRoutines.toFront();
     }
 
     @Override
