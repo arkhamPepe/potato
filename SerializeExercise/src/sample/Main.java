@@ -24,9 +24,8 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        launch(args);
         exercises = new ArrayList<>();
-
+        launch(args);
     }
 
     public static void printExercises(){

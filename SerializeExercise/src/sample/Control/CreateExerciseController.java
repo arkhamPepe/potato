@@ -4,7 +4,9 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import sample.Controller;
 import sample.Exercise;
 import sample.ExerciseType;
@@ -17,7 +19,7 @@ import java.util.ResourceBundle;
 public class CreateExerciseController implements Initializable {
     private Controller controller;
 
-
+    @FXML private AnchorPane anchorBase;
 
     @FXML private TextField txtName;
     @FXML private Spinner<Integer> spinnerDifficulty;
@@ -42,6 +44,11 @@ public class CreateExerciseController implements Initializable {
         radCardioExercise.setToggleGroup(radioButtons);
         radStrengthExercise.setToggleGroup(radioButtons);
         radStretchExercise.setToggleGroup(radioButtons);
+        radStrengthExercise.setSelected(true);
+
+        // Value factory.
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 1);
+        spinnerDifficulty.setValueFactory(valueFactory);
     }
 
     @FXML
@@ -67,8 +74,6 @@ public class CreateExerciseController implements Initializable {
         catch (IOException e){
             System.out.println("Save failed!");
         }
-
-
     }
 
     private ExerciseType getExerciseType() throws IOException {
@@ -86,8 +91,9 @@ public class CreateExerciseController implements Initializable {
         }
     }
 
-
-
+    public Node getBaseNode(){
+        return anchorBase;
+    }
 
 
 
