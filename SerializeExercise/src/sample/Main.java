@@ -6,7 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main extends Application {
+
+    private static List<Exercise> exercises;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -20,5 +25,17 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        exercises = new ArrayList<>();
+
+    }
+
+    public static void printExercises(){
+        for(Exercise e : exercises){
+            System.out.println(e.toString());
+        }
+    }
+
+    public static void addExercise(Exercise e){
+
     }
 }

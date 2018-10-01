@@ -25,3 +25,11 @@
 .cool-font {
     -fx-font-family: fantasy;
 }
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 1 0 1;
+}
+
+.big-text {
+    -fx-font-size: 18px;
+}

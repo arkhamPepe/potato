@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
@@ -28,7 +29,6 @@ public class Controller implements Initializable {
     private ViewRoutinesController viewRoutinesController;
 
     @FXML private AnchorPane base;
-    @FXML private StackPane stack;
 
     @FXML private AnchorPane anchorHome;
     @FXML private AnchorPane anchorSubpage;
@@ -46,6 +46,8 @@ public class Controller implements Initializable {
     @FXML private Button btnCreateRoutine;
     @FXML private Button btnViewExercises;
     @FXML private Button btnViewRoutines;
+
+    @FXML private Label lblTitle;
 
     public Controller(){
         controller = this;
@@ -73,28 +75,32 @@ public class Controller implements Initializable {
     public void showCreateExercise(){
         frontSubpage();
         anchorCreateExercise.toFront();
+        lblTitle.setText("Skapa en övning");
     }
 
     @FXML
     public void showCreateRoutine(){
         frontSubpage();
         anchorCreateRoutine.toFront();
+        lblTitle.setText("Bygg ett träningspass");
     }
 
     @FXML
     public void showViewExercises(){
         frontSubpage();
         anchorViewExercises.toFront();
+        lblTitle.setText("Alla övningar");
     }
 
     @FXML
     public void showViewRoutines(){
         frontSubpage();
         anchorViewRoutines.toFront();
+        lblTitle.setText("Alla träningspass");
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        frontHome();
     }
 }
