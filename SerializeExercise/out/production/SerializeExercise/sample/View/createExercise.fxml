@@ -9,7 +9,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="anchorCreateExercise" fx:id="rad" nodeOrientation="RIGHT_TO_LEFT" prefHeight="313.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.CreateExerciseController">
+
+<AnchorPane fx:id="anchorBase" nodeOrientation="RIGHT_TO_LEFT" prefHeight="313.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.CreateExerciseController">
    <children>
       <AnchorPane layoutX="81.0" layoutY="61.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="283.0" prefWidth="437.0" style="-fx-border-color: #000000; -fx-border-width: 2px;" styleClass="whiteBackground" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
          <children>
