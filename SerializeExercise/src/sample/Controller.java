@@ -74,28 +74,29 @@ public class Controller implements Initializable {
     @FXML
     public void showCreateExercise(){
         frontSubpage();
-        anchorCreateExercise.toFront();
+        //anchorCreateExercise.toFront();
+        anchorCreateExercise.getParent().toFront();
         lblTitle.setText("Skapa en övning");
     }
 
     @FXML
     public void showCreateRoutine(){
         frontSubpage();
-        anchorCreateRoutine.toFront();
+        anchorCreateRoutine.getParent().toFront();
         lblTitle.setText("Bygg ett träningspass");
     }
 
     @FXML
     public void showViewExercises(){
         frontSubpage();
-        anchorViewExercises.toFront();
+        anchorViewExercises.getParent().toFront();
         lblTitle.setText("Alla övningar");
     }
 
     @FXML
     public void showViewRoutines(){
         frontSubpage();
-        anchorViewRoutines.toFront();
+        anchorViewRoutines.getParent().toFront();
         lblTitle.setText("Alla träningspass");
     }
 

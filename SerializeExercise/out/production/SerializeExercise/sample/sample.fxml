@@ -32,10 +32,18 @@
                      </children></AnchorPane>
                 <AnchorPane fx:id="subpageContent" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                         <fx:include fx:id="anchorCreateExercise" source="View/createExercise.fxml" />
-                         <!--<fx:include fx:id="anchorCreateRoutine" source="View/createRoutine.fxml" />
-                         <fx:include fx:id="anchorViewExercises" source="View/viewExercises.fxml" />
-                         <fx:include fx:id="anchorViewRoutines" source="View/viewRoutines.fxml" /> -->
+                        <AnchorPane prefHeight="300.0" prefWidth="600.0">
+                            <fx:include fx:id="anchorViewExercises" source="View/viewExercises.fxml" />
+                        </AnchorPane>
+                        <AnchorPane prefHeight="300.0" prefWidth="600.0">
+                            <fx:include fx:id="anchorViewRoutines" source="View/viewRoutines.fxml" />
+                        </AnchorPane>
+                         <AnchorPane prefHeight="300.0" prefWidth="600.0">
+                            <fx:include fx:id="anchorCreateExercise" source="View/createExercise.fxml" />
+                         </AnchorPane>
+                        <AnchorPane prefHeight="300.0" prefWidth="600.0">
+                            <fx:include fx:id="anchorCreateRoutine" source="View/createRoutine.fxml" />
+                        </AnchorPane><!-- -->
                      </children>
                   </AnchorPane>
               </items>

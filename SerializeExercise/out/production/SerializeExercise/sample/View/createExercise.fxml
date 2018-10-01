@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="rad" nodeOrientation="RIGHT_TO_LEFT" prefHeight="313.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.CreateExerciseController">
+<AnchorPane id="anchorCreateExercise" fx:id="rad" nodeOrientation="RIGHT_TO_LEFT" prefHeight="313.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.CreateExerciseController">
    <children>
-      <AnchorPane layoutX="81.0" layoutY="61.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="277.0" prefWidth="480.0" style="-fx-border-color: #000000; -fx-border-width: 2px;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
+      <AnchorPane layoutX="81.0" layoutY="61.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="283.0" prefWidth="437.0" style="-fx-border-color: #000000; -fx-border-width: 2px;" styleClass="whiteBackground" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
          <children>
             <Label alignment="CENTER_RIGHT" layoutX="98.0" layoutY="85.0" prefHeight="17.0" prefWidth="128.0" text="Svårighetsgrad:" AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="85.0" />
             <Spinner fx:id="spinnerDifficulty" editable="true" layoutX="232.0" layoutY="79.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="54.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="80.0" />

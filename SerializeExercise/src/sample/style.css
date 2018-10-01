@@ -5,6 +5,41 @@
     -fx-background-position: center center;
 }
 
+#anchorCreateExercise {
+    -fx-background-image: url("flames2.jpg");
+    -fx-background-size: 600 400;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+#anchorCreateRoutine {
+    -fx-background-image: url("flames_big.jpg");
+    -fx-background-size: 600 400;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+#anchorViewExercises {
+    -fx-background-image: url("flames_blue.jpg");
+    -fx-background-size: 600 400;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+#anchorViewRoutines {
+    -fx-background-image: url("flames_stripes.jpg");
+    -fx-background-size: 600 400;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+.whiteBackground {
+    -fx-background-image: url("white.png");
+    -fx-background-size: 600 400;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
 #anchorHomeTitle {
     -fx-background-color: #000000;
 }

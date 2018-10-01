@@ -8,10 +8,11 @@ public class Exercise implements Serializable {
     private String equipment;
     private ExerciseType exerciseType;
 
-    public Exercise(double difficulty, String name, String equipment, ExerciseType type){
+    public Exercise(double difficulty, String name, String equipment, ExerciseType exerciseType) {
         this.difficulty = difficulty;
         this.name = name;
         this.equipment = equipment;
+        this.exerciseType = exerciseType;
     }
 
     @Override
