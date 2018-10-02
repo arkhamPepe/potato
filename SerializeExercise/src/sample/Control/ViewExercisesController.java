@@ -3,8 +3,10 @@ package sample.Control;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import sample.Controller;
+import sample.Main;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,18 +14,19 @@ import java.util.ResourceBundle;
 public class ViewExercisesController implements Initializable {
     private Controller controller;
 
-    @FXML private AnchorPane anchorBase;
+    @FXML private Button btnShowExercises;
 
     public ViewExercisesController(){
 
     }
 
-    public Node getBaseNode(){
-        return anchorBase;
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+    @FXML
+    private void printExercises(){
+        Main.printAllExercises();
     }
 }

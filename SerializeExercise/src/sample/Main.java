@@ -33,13 +33,19 @@ public class Main extends Application {
         launch(args);
     }
 
-    public static void printExercises(){
+    public static void printAllExercises(){
+        System.out.println();
+
         for(Exercise e : exercises){
             System.out.println(e.toString());
         }
     }
 
-    public static void addExercise(Exercise e){
+    public static void printExercise(Exercise exercise){
+        System.out.println("\n" + exercise.toString());
+    }
 
+    public static void addExercise(Exercise exercise){
+        exercises.add(exercise);
     }
 }

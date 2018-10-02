@@ -17,7 +17,18 @@ public class Exercise implements Serializable {
 
     @Override
     public String toString() {
-        return "[" + name + ": Type = " + exerciseType.toString() + "; Difficulty = " + String.valueOf(difficulty) + "; Equipment = " + equipment + "]";
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        sb.append(name);
+        sb.append(": Type = ");
+        sb.append(exerciseType);
+        sb.append("; Difficulty = ");
+        sb.append(difficulty);
+        sb.append("; Equipment = ");
+        sb.append(equipment);
+        sb.append("]");
+
+        return sb.toString();
     }
 
     public double getDifficulty() {

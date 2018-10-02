@@ -1,7 +1,5 @@
 package sample.Control;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -69,7 +67,7 @@ public class CreateExerciseController implements Initializable {
             Exercise exercise = new Exercise(difficulty, name, equipment, exerciseType);
 
             Main.addExercise(exercise);
-            Main.printExercises();
+            Main.printExercise(exercise);
         }
         catch (IOException e){
             System.out.println("Save failed!");
