@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -19,6 +20,10 @@ public class Main extends Application {
         primaryStage.setTitle("Exercise Maker");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.setResizable(false);
+
+        Image image = new Image("/sample/Images/gym-icon.png");
+
+        primaryStage.getIcons().add(image);
         primaryStage.show();
     }
 

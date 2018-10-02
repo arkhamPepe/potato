@@ -10,7 +10,7 @@ public class CreateRoutineController {
 
     @FXML private AnchorPane anchorBase;
 
-    CreateRoutineController(){
+    public CreateRoutineController(){
 
     }
 

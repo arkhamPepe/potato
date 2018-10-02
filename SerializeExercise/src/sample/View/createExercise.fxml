@@ -9,27 +9,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="anchorBase" nodeOrientation="RIGHT_TO_LEFT" prefHeight="313.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.CreateExerciseController">
+<AnchorPane id="anchorCreateExercise" fx:id="anchorBase" nodeOrientation="RIGHT_TO_LEFT" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.CreateExerciseController">
    <children>
-      <AnchorPane layoutX="81.0" layoutY="61.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="283.0" prefWidth="437.0" style="-fx-border-color: #000000; -fx-border-width: 2px;" styleClass="whiteBackground" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
+      <AnchorPane layoutX="81.0" layoutY="61.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="283.0" prefWidth="437.0" style="-fx-border-color: #000000; -fx-border-width: 2px; -fx-background-color: white;" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label alignment="CENTER_RIGHT" layoutX="98.0" layoutY="85.0" prefHeight="17.0" prefWidth="128.0" text="Svårighetsgrad:" AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="85.0" />
-            <Spinner fx:id="spinnerDifficulty" editable="true" layoutX="232.0" layoutY="79.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="54.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="80.0" />
-            <TextField fx:id="txtEquipment" layoutX="232.0" layoutY="109.0" nodeOrientation="LEFT_TO_RIGHT" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="110.0" />
-            <RadioButton fx:id="radStrengthExercise" contentDisplay="TOP" layoutX="100.0" layoutY="154.0" maxWidth="150.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="150.0" text="Styrka" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="154.0" />
-            <RadioButton fx:id="radCardioExercise" contentDisplay="TOP" layoutX="100.0" layoutY="174.0" maxWidth="150.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="300.0" text="Kondition" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="174.0" />
-            <RadioButton fx:id="radStretchExercise" contentDisplay="TOP" layoutX="100.0" layoutY="194.0" maxWidth="150.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="300.0" text="Stretching" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="194.0" />
             <Label layoutX="201.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" text="Ny övning" AnchorPane.topAnchor="10.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="96.0" layoutY="116.0" prefHeight="17.0" prefWidth="128.0" text="Redskap:" AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="116.0" />
-            <Button fx:id="btnSave" layoutX="420.0" layoutY="238.0" mnemonicParsing="false" onAction="#save" text="Spara" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="100.0" />
-            <TextField fx:id="txtName" layoutX="230.0" layoutY="50.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="50.0" />
             <Label alignment="CENTER_RIGHT" layoutX="98.0" layoutY="56.0" prefHeight="17.0" prefWidth="128.0" text="Namn:" AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="56.0" />
-            <Button fx:id="btnHome" layoutX="273.0" layoutY="246.0" mnemonicParsing="false" onAction="#goHome" text="Home" />
+            <Label alignment="CENTER_RIGHT" layoutX="98.0" layoutY="85.0" prefHeight="17.0" prefWidth="128.0" text="Svårighetsgrad:" AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="85.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="96.0" layoutY="116.0" prefHeight="17.0" prefWidth="128.0" text="Redskap:" AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="116.0" />
+            <TextField fx:id="txtName" layoutX="230.0" layoutY="50.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="50.0" />
+            <Spinner fx:id="spinnerDifficulty" editable="true" layoutX="232.0" layoutY="79.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="54.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="80.0" />
+            <TextField fx:id="txtEquipment" layoutX="232.0" layoutY="109.0" nodeOrientation="LEFT_TO_RIGHT" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="110.0" />
+            <RadioButton fx:id="radStrengthExercise" contentDisplay="TOP" layoutX="100.0" layoutY="154.0" maxWidth="150.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="150.0" text="Styrka" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="154.0" />
+            <RadioButton fx:id="radCardioExercise" contentDisplay="TOP" layoutX="100.0" layoutY="174.0" maxWidth="150.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="300.0" text="Kondition" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="174.0" />
+            <RadioButton fx:id="radStretchExercise" contentDisplay="TOP" layoutX="100.0" layoutY="194.0" maxWidth="150.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="300.0" text="Stretching" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="194.0" />
+            <Button fx:id="btnSave" layoutX="420.0" layoutY="238.0" mnemonicParsing="false" onAction="#save" text="Spara" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="100.0" />
+            <Button fx:id="btnHome" layoutX="273.0" layoutY="246.0" mnemonicParsing="false" onAction="#goHome" text="Home" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="155.0" />
          </children>
       </AnchorPane>
    </children>

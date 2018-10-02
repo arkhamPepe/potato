@@ -10,7 +10,7 @@ public class ViewRoutinesController {
 
     @FXML private AnchorPane anchorBase;
 
-    ViewRoutinesController(){
+    public ViewRoutinesController(){
 
     }
 
