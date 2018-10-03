@@ -17,8 +17,6 @@ import java.util.ResourceBundle;
 public class CreateExerciseController implements Initializable {
     private Controller controller;
 
-    @FXML private AnchorPane anchorBase;
-
     @FXML private TextField txtName;
     @FXML private Spinner<Integer> spinnerDifficulty;
     @FXML private TextField txtEquipment;
@@ -49,13 +47,24 @@ public class CreateExerciseController implements Initializable {
         spinnerDifficulty.setValueFactory(valueFactory);
     }
 
-    @FXML
-    private void goHome(){
-        controller.frontHome();
+    @FXML private void btnSaveAction(){
+        String name = txtName.getText();
+
+        if (name.equals("") || name.equals(" ")){
+            System.out.println("Exercise not saved - enter a name!");
+        }
+        else {
+            save();
+            clearForm();
+        }
     }
 
-    @FXML
-    private void save() throws IOException {
+    private void clearForm(){
+        txtName.setText("");
+        txtEquipment.setText("");
+    }
+
+    private void save() {
         String name = txtName.getText();
         Integer difficultyValue = spinnerDifficulty.getValue();
         double difficulty = difficultyValue.doubleValue();
@@ -70,7 +79,7 @@ public class CreateExerciseController implements Initializable {
             Main.addExercise(exercise);
             Main.printExercise(exercise);
         }
-        catch (IOException e){
+        catch (Exception e){
             System.out.println("Save failed!");
         }
     }
@@ -88,10 +97,6 @@ public class CreateExerciseController implements Initializable {
         else {
             throw new IOException();
         }
-    }
-
-    public Node getBaseNode(){
-        return anchorBase;
     }
 
 
