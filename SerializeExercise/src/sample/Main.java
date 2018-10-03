@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +32,18 @@ public class Main extends Application {
     public static void main(String[] args) {
         exercises = new ArrayList<>();
         launch(args);
+
+        /*try {
+            Process p = Runtime.getRuntime().exec("cmd /c start cmd.exe");
+            p.waitFor();
+        }
+        catch (IOException e){
+            System.out.println("Caught IOException");
+        }
+        catch (InterruptedException e){
+            System.out.println("Caught InterruptedException");
+        }*/
+
     }
 
     public static void printAllExercises(){
@@ -47,5 +60,37 @@ public class Main extends Application {
 
     public static void addExercise(Exercise exercise){
         exercises.add(exercise);
+        writeExerciseToFile(exercise, "/Saves/exercises.ser");
+    }
+
+    private static void writeExerciseToFile(Exercise exercise, String PATH){
+        try {
+            FileOutputStream fileOut = new FileOutputStream(PATH);
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(exercise);
+            out.close();
+            fileOut.close();
+            System.out.printf("Serialized data is saved in " + PATH);
+        } catch (IOException i) {
+            System.out.println("Failed to save exercise!");
+        }
+    }
+
+    private static Exercise readExerciseFromFile(String PATH){
+        Exercise exercise = null;
+        try {
+            FileInputStream fileIn = new FileInputStream(PATH);
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            exercise = (Exercise) in.readObject();
+            in.close();
+            fileIn.close();
+        } catch (IOException i) {
+            i.printStackTrace();
+        } catch (ClassNotFoundException c) {
+            System.out.println("Employee class not found");
+            c.printStackTrace();
+        }
+
+        return exercise;
     }
 }
