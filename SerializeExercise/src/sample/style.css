@@ -34,10 +34,11 @@
 }
 
 .whiteBackground {
-    -fx-background-image: url("Images/white.png");
-    -fx-background-size: 600 400;
-    -fx-background-repeat: stretch;
-    -fx-background-position: center center;
+    -fx-background-color: white;
+}
+
+.blackBackground {
+    -fx-background-color: black;
 }
 
 #anchorHomeTitle {

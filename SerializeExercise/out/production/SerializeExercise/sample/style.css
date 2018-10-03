@@ -40,6 +40,10 @@
     -fx-background-position: center center;
 }
 
+.blackBackground {
+    -fx-background-color: black;
+}
+
 #anchorHomeTitle {
     -fx-background-color: #000000;
 }

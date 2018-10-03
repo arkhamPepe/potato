@@ -62,6 +62,7 @@ public class CreateExerciseController implements Initializable {
         String equipment = txtEquipment.getText();
         ExerciseType exerciseType;
 
+        // Create and save exercise
         try {
             exerciseType = getExerciseType();
             Exercise exercise = new Exercise(difficulty, name, equipment, exerciseType);
